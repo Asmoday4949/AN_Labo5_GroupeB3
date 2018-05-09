@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function(event)
 
   pi = pi.toFixed(17);
   
-  console.log(pi);
-  console.log(piString);
+  console.log("Pi : " + piString);
+  console.log("Evaluated Pi : " + pi);
+  
 });
