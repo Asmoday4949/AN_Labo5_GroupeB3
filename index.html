@@ -11,19 +11,31 @@
     
 		<h2>Contexte</h2>
 		<p>
-      bla
+      Dans le cadre du cours d'algorithmes numériques donné par M. Stéphane Gobron
+      à la Haute Ecole Arc Ingénierie de Neuchâtel durant le semestre de printemps 2018, 
+      nous devions approximer la valeur de &pi; avec au moins 17 décimales en utilisant la formule :
+    </p>
+    <p>
+        <img src="./ressources/integrationPi.png" alt="&pi;/4 = integrale de 0 à 1 de (dx / (1 + x^2)" height="65" width="145">
+    </p>
+    <p>
+      Afin de rendre le laboratoire plus attrayant, les différents projets de la classe seront mis en concurrence sur le temps de résolution.
     </p>
     <hr />
 
 		<h2>Méthodologie de développement</h2>
 		<p>
-      bla
+      Pour résoudre l'intégrale, nous avons implémenter la méthode de Simpson. Cette dernière consiste à utiliser un polynôme 
+      passant par 3 points de la fonction originale et d'en calculer l'intégrale avec la méthode de Taylor. Cette méthode 
+      donne l'ordre d'erreur potentielle O(h<sup>4</sup>).
     </p>
-    <hr />
+    <div id="graph">
 
-    <div>
-      <p>Affichage du graphe</p>
     </div>
+    <p id="estimePi">Valeur de Pi estimé : </p>
+    <p id="time">Temps de calcul : </p>
+    <hr />
+    
     <h2>Conclusion</h2>
     <p>
       bla
