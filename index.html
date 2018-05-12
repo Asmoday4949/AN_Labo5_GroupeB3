@@ -8,11 +8,11 @@
     <h1>Laboratoire N° 5 - Intégration Numérique</h1>
     <h4>TP réalisé par Biloni Kim Aurore, Bulloni Lucas &amp; Fleury Malik</h4>
     <hr />
-    
+
 		<h2>Contexte</h2>
 		<p>
       Dans le cadre du cours d'algorithmes numériques donné par M. Stéphane Gobron
-      à la Haute Ecole Arc Ingénierie de Neuchâtel durant le semestre de printemps 2018, 
+      à la Haute Ecole Arc Ingénierie de Neuchâtel durant le semestre de printemps 2018,
       nous devions approximer la valeur de &pi; avec au moins 17 décimales en utilisant la formule :
     </p>
     <p>
@@ -25,14 +25,30 @@
 
 		<h2>Méthodologie de développement</h2>
 		<p>
-      Pour résoudre l'intégrale, nous avons implémenter la méthode de Simpson. Cette dernière consiste à utiliser un polynôme 
-      passant par 3 points de la fonction originale et d'en calculer l'intégrale avec la méthode de Taylor. Cette méthode 
+      Pour résoudre l'intégrale, nous avons implémenter la méthode de Simpson. Cette dernière consiste à utiliser un polynôme
+      passant par 3 points de la fonction originale et d'en calculer l'intégrale avec la méthode de Taylor. Cette méthode
       donne l'ordre d'erreur potentielle O(h<sup>4</sup>).
     </p>
     <div id="graph">
 
     </div>
-    <p id="estimePi">Valeur de Pi estimé : </p>
+    <table>
+      <tr>
+        <td>Valeur de pi de Javascript : </td>
+        <td id="mathPi"></td>
+      </tr>
+
+      <tr>
+        <td>Valeur de pi 'officiel' : </td>
+        <td>3.14159265358979323 </td>
+      </tr>
+
+      <tr>
+        <td>Valeur de Pi estimé avec l'algorithme de Simpson : </td>
+        <td id="estimePi"></td>
+      </tr>
+    <table>
+
     <p id="time">Temps de calcul : </p>
     <hr />
 
@@ -56,17 +72,26 @@
     <p><a href="https://www.washingtonpost.com/news/wonk/wp/2015/03/14/10-stunning-images-show-the-beauty-hidden-in-pi/?noredirect=on&utm_term=.ac1029b31cce">Source</a></p>
 
     <h3>2 : "Pi as music"</h3>
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/HV1-AjwDJwM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	   <iframe width="560" height="315" src="https://www.youtube.com/embed/HV1-AjwDJwM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     <p>
       Ici, pi est representé sous la forme d'une musique. Chaque chiffre de pi correspond à une note, la durée est représentée par la valeur suivante et l'intonation par la valeur qui suit la durée.</br>
 	  Si le lecteur ne s'affiche pas, il est possible de voir la vidéo <a href="https://www.youtube.com/watch?v=HV1-AjwDJwM">ici</a>.
     </p>
 
-    <h3>3 : titre</h3>
-    <img src="" alt="" height="100" width="100" />
+    <h3>3 : Circular π art by Martin Krzywinski</h3>
+    <img src="ressources/rep3.png" alt="" width="800" />
     <p>
-      Explication de la représentation
+      Dans cette image, on a séparé le contour d'un cercles en dix parties. Chaque partie représente un chiffre. L'auteur a relié chaque décimales avec la décimale suivant pour les 1000 premières décimales.<br />
+      Les points en dessous de ligne externe à la circonférence du cercle montre d'ou la ligne vient et ceux au-dessus, montrent où la ligne va.<br />
     </p>
+    <p>
+      Et la taille du point indique le nombre de décimale qui se suivent.
+    </p>
+    <p>
+      Par exemple le gros point violet montre une série de six 9 consécutifs aux environs de la 100ème décimales.
+    </p>
+
+    <a href="http://mkweb.bcgsc.ca/pi/art/">source</a>
 
     <script src="./ressources/plotly-latest.min.js"></script>
     <script src="integral.js"></script>

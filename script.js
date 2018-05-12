@@ -7,12 +7,13 @@ document.addEventListener('DOMContentLoaded', function(event)
   let computeTime = performance.now() - startTime; // register the end of the timer
 
   pi = pi.toFixed(17);
-  
+
   console.log("Pi : " + piString);
   console.log("Evaluated Pi : " + pi);
+  document.getElementById('mathPi').innerHTML += Math.PI.toFixed(17);
   document.getElementById('estimePi').innerHTML += pi;
   document.getElementById('time').innerHTML += computeTime + ' ms';
-  
+
   displayPlot("graph");
 });
 
@@ -23,7 +24,7 @@ function displayPlot(divPlot)
   const step = 0.001;
 
   let layout =
-  {    
+  {
     width: 400,
     height: 400,
 
